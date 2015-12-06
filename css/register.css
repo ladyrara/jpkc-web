@@ -1,0 +1,23 @@
+.register{
+		width: 300px;
+		border: 1px solid #bdbdbd;
+		text-align: center;
+}
+.register input{
+	margin-top: 10px;
+}
+
+
+
+body{
+	color: #000000;background-color: #FFFFFF;
+	
+}
+input.invalid{
+	background-color: #ff9;
+	border: 2px red inset;
+}
+label.invalid{
+	color: #FF0000;
+	font-weight: bold;
+}

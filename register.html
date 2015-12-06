@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<title>注册</title>
+	</head>
+	<body>
+		<!--<div class="register" id="register">
+			<label>学&nbsp;&nbsp;号：</label>
+			<input type="text" id="username"/><br>
+			<label>登录密码：</label>
+			<input type="password" placeholder="密码必须是6-20位" id="password"/><br>
+			<label>确认密码：</label>
+			<input type="password" id="password2"/><br>
+			<a class="button" id="submit">提交</a>
+			<a class="button">重置</a>
+		</div>	
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#submit").onclick(function(){
+					var 
+					username=document.getElementById('username'),
+					pwd=document.getElementById('password'),
+					pwd2=document.getElementById('password2'),
+					plimit = /^.{6,20}$/;
+					if(!plimit.test(pwd.value)){
+					  alert("密码必须是6-20位");
+					  return false;
+					}
+					else if(pwd.value!==pwd2.value){
+						alert("两次密码输入不一致");
+						return false;
+					}
+					else{
+						return true;
+					}
+				});
+			});
+		</script>-->
+		<form action="#">
+			<p><label for="userName">Your name:<input type="text" id="userName" class="reqd"></label></p>
+			<p><label for="passwd1">Choose a password:<input type="password" class="reqd" id="passwd1"></label></p>
+			<p><label for="passwd2">Verify password:<input type="password" class="reqd passwd1" id="passwd2"></label></p>
+			<p><input type="submit" value="Submit">&nbsp;<input type="reset"></p>
+		</form>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				document.forms[0].onsubmit = validForm;//document.forms：表示获取当前页面的所有表单  document.forms[0]：表示获取当前页面的第一个表单
+				//提交函数发生顺序:onsubmit -> submit 
+			}
+			function validForm(){
+				var allGood = true;
+				var allTags = document.forms[0].getElementsByTagName("*");
+				
+				for(var i=0;i<allTags.length;i++){
+					if(!validTag(allTags[i])){
+						allGood = false;
+					}
+				}
+				return allGood;
+				
+				function validTag(thisTag){
+					var outClass = "";
+					var allClasses = thisTag.className.split("");//split() 方法用于把一个字符串分割成字符串数组
+					
+					for (var j=0;j<allClasses.length;j++){
+						outClass += validBaseOnClass(allClasses[j])+"";
+					}
+					thisTag.className = outClass;
+						
+					
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
